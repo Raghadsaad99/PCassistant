@@ -1,0 +1,4 @@
+google-generativeai
+pyautogui
+tk
+screen_brightness_control
