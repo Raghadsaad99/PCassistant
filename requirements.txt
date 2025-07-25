@@ -1,4 +1,8 @@
 google-generativeai
+requests
+tkinter
 pyautogui
-tk
 screen_brightness_control
+pycaw
+comtypes
+python-dotenv
