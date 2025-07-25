@@ -9,7 +9,6 @@ def submit_command(event=None):
     if not user_input or user_input == placeholder:
         return
 
-    # Log user input
     log_area.insert(tk.END, f"User: {user_input}\n")
     log_area.see(tk.END)
 
@@ -18,8 +17,8 @@ def submit_command(event=None):
 
     if intent_type == "system":
         result = execute_command(action, user_input)
-        if not result:
-            result = "[Unknown system command]"
+        
+        
     else:
         result = ask_llm(user_input)
 
@@ -32,7 +31,7 @@ def submit_command(event=None):
     input_field.delete(0, tk.END)
     input_field.focus()
 
-# --- GUI setup ---
+# GUI setup
 root = tk.Tk()
 root.title("Smart Desktop Assistant")
 root.geometry("700x500")
@@ -85,3 +84,4 @@ root.bind('<Return>', submit_command)
 input_field.focus()
 
 root.mainloop()
+
