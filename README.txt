@@ -1,60 +1,29 @@
-Smart Desktop Assistant
-=======================
+# Smart Personal Assistant (Python + Gemini LLM)
 
-This is a Python-based personal assistant that runs on a desktop computer. It supports both system automation and intelligent Q&A using the Gemini LLM.
+## Features:
+- Control brightness and volume 
+- Take screenshots
+- Open Microsoft Word
+- Search Google and YouTube
+- Ask general questions via Gemini LLM
+- User-friendly GUI with tkinter
 
-----------------------------
-📦 SETUP INSTRUCTIONS
-----------------------------
-
-1. Make sure Python 3.10+ is installed.
-
+## Setup:
+1. Install Python 3.x
 2. Install dependencies:
-
    pip install -r requirements.txt
+3. Create a `.env` file with your Gemini API key:
+   GEMINI_API_KEY=your_api_key_here
 
-3. (Optional) Set your Gemini API key as an environment variable:
-
-   export GEMINI_API_KEY=your-api-key   # on Linux/macOS
-  
-
-   (Alternatively, the API key is hardcoded in llm_handler.py for testing.)
-
-----------------------------
-▶ HOW TO RUN
-----------------------------
-
-Run the assistant using:
-
+## Usage:
+Run the assistant:
    python main.py
 
-The GUI will launch with a text field. Type a command or a question.
+Example commands:
+- "increase brightness"
+- "take a screenshot"
+- "search google for weather today"
+- "open word"
+- "What is the capital of Italy?"
 
-----------------------------
-🛠 SUPPORTED COMMANDS
-----------------------------
 
-- Search Google:           "Search Python tutorials on Google"
-- Search YouTube:          "Find cat videos on YouTube"
-- Take a Screenshot:       "Take a screenshot"
-- Control Brightness:      "Brightness up" / "Brightness down"
-- Control Volume:          "Volume up" / "Volume down"
-- Open MS Word:            "Start Word project"
-- Download Music:          (placeholder only)
-- Ask any question:        "What is a black hole?" → uses Gemini
-
-----------------------------
-💡 LLM INTEGRATION
-----------------------------
-
-- LLM Used: Gemini 2.5 Pro
-- SDK: google-generativeai
-- All general questions are passed to Gemini via API.
-
-----------------------------
-⚠ NOTES
-----------------------------
-
-- Brightness control is simulated.
-- Volume control uses pyautogui keypress.
-- LLM responses are printed directly from Gemini.
