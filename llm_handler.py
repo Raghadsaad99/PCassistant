@@ -1,8 +1,8 @@
 import os
 import google.generativeai as genai
 
-API_KEY = "AIzaSyDh8kqAS5QzrLNm-mbuTPlVI850Qp_OM80"  # hardcoded for now
-# API_KEY = os.getenv("GEMINI_API_KEY")  # use this in production
+API_KEY = os.getenv("GEMINI_API_KEY")  
+
 
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY is not set.")
