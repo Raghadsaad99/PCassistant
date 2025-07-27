@@ -1,5 +1,9 @@
 import os
+from dotenv import load_dotenv  # <- NEW
 import google.generativeai as genai
+
+# Load environment variables from .env file
+load_dotenv()  
 
 # Get the Gemini API key from environment variable
 API_KEY = os.getenv("GEMINI_API_KEY")
@@ -26,9 +30,7 @@ def ask_llm(prompt: str) -> str:
         str: The generated response from the model, or an error message if something fails.
     """
     try:
-        # Generate content from the prompt
         resp = model.generate_content(prompt)
         return resp.candidates[0].content.parts[0].text
     except Exception as e:
-        # Return error message in case of failure
         return f"Error contacting Gemini LLM: {e}"
